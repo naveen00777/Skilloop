@@ -1,0 +1,140 @@
+/* FooterStyles.css */
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 50px 0 20px;
+}
+
+.brand-container {
+  margin-bottom: 15px;
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.logo-text {
+  font-size: 24px;
+  color: #4db6ac;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.footer-nav a:hover {
+  color: #4db6ac;
+  transition: color 0.3s ease;
+}
+
+.join-us h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: white;
+  color: #1a1a1a;
+  transform: translateY(-3px);
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: #333;
+  margin: 30px 0;
+}
+
+.copyright {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Add Bootstrap responsive classes */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-lg-2, .col-lg-3, .col-md-6 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .mb-md-0 {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+
+  .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media (max-width: 992px) {
+  .join-us {
+    margin-top: 30px;
+  }
+}
+.social-icon-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}

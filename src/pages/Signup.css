@@ -1,0 +1,131 @@
+/* Signup Container */
+.signup-container {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) ;
+  overflow: hidden;
+}
+
+/* Form Section */
+.form-section {
+  flex: 1;
+  padding: 40px;
+}
+
+.form-section h2 {
+  color: #000;
+  font-weight: bold;
+}
+
+.form-section h4 {
+  margin-bottom: 20px;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Checkbox */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.checkbox-group input {
+  margin-right: 8px;
+}
+
+.checkbox-group a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sign In Button */
+.btn-signin {
+  width: 100%;
+  padding: 10px;
+  background: #4b6b39;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-signin:hover {
+  background: #3c5a2f;
+}
+
+/* OR Text */
+.or-text {
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-buttons button {
+  flex: 1;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.google {
+  background: white;
+}
+
+.microsoft {
+  background: white;
+}
+
+.apple {
+  background: white;
+}
+
+/* Login Text */
+.login-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-text a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Image Section */
+.image-section {
+  flex: 1;
+  background: url("#") no-repeat center center;
+  background-size: cover;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
