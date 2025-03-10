@@ -1,0 +1,127 @@
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+.navbar-brand img {
+  max-height: 45px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #000;
+  font-weight: 500;
+  margin: 0 10px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #f8f9fa;
+}
+
+.nav-btn:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.profile-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.profile-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .nav-btn {
+    margin: 5px 0;
+    text-align: left;
+    width: 100%;
+  }
+}
+.nav-list {
+  display: flex;  /* Makes the list items appear in one line */
+  list-style: none;  /* Removes bullet points */
+  padding: 0;  /* Removes default padding */
+  margin: 0;  /* Removes default margin */
+}
+
+.nav-list li {
+  margin: 0 10px;  /* Adds spacing between buttons */
+}
+
+.nav-btn {
+  text-decoration: none;  /* Removes underline from links */
+  padding: 10px 15px;
+  background-color: #FFFFFF;  /* Example blue background */
+  color: black;  /* White text */
+  border-radius: 5px;  /* Rounded corners */
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #c3e9e2;  /* Darker blue on hover */
+}
+/* Profile dropdown styling */
+.profile-container {
+  position: relative;
+}
+
+.profile-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.profile-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.profile-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-dropdown li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.profile-dropdown li:hover {
+  background-color: #f5f5f5;
+}

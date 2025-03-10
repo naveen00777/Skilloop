@@ -1,131 +1,260 @@
-/* Signup Container */
 .signup-container {
   display: flex;
-  max-width: 900px;
-  width: 100%;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) ;
-  overflow: hidden;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
-/* Form Section */
-.form-section {
+.signup-form-container {
   flex: 1;
-  padding: 40px;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
 }
 
-.form-section h2 {
-  color: #000;
-  font-weight: bold;
-}
-
-.form-section h4 {
-  margin-bottom: 20px;
-}
-
-/* Form Groups */
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  font-weight: 600;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* Checkbox */
-.checkbox-group {
+.image-container {
+  flex: 1;
+  background-color: #FFFFFF;
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
-.checkbox-group input {
-  margin-right: 8px;
-}
-
-.checkbox-group a {
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Sign In Button */
-.btn-signin {
-  width: 100%;
-  padding: 10px;
-  background: #4b6b39;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.btn-signin:hover {
-  background: #3c5a2f;
-}
-
-/* OR Text */
-.or-text {
-  text-align: center;
-  margin: 15px 0;
-}
-
-/* Social Buttons */
-.social-buttons {
-  display: flex;
-  justify-content: space-between;
-}
-
-.social-buttons button {
-  flex: 1;
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.google {
-  background: white;
-}
-
-.microsoft {
-  background: white;
-}
-
-.apple {
-  background: white;
-}
-
-/* Login Text */
-.login-text {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.login-text a {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* Image Section */
-.image-section {
-  flex: 1;
-  background: url("#") no-repeat center center;
+.network-image {
+  width:700px;
+  height: 1000px;
+  background-image: url('../assets/network-image-signup.png');
   background-size: cover;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius:100px;
+  border-bottom-left-radius:100px;
+  background:#FFFFFF;
+}
+
+.signup-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.signup-subtitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+}
+
+.input-field {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.password-toggle-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.terms-label {
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.terms-link {
+  color: #326336;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-btn {
+  padding: 0.875rem;
+  background-color: #326336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.signup-btn:hover {
+  background-color: #254b28;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.divider span {
+  display: inline-block;
+  padding: 0 10px;
+  background-color: white;
+  position: relative;
+  color: #777;
+  font-size: 0.875rem;
+}
+
+.social-login-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.social-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.75rem;
+}
+
+.login-link-container {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.login-link {
+  color: #326336;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .signup-form-container {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+  }
+
+  .signup-form-container {
+    max-width: 100%;
+    order: 2;
+    padding: 2rem 1.5rem;
+  }
+
+  .image-container {
+    order: 1;
+    height: 200px;
+    background:white;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .signup-title {
+    font-size: 2rem;
+  }
+
+  .signup-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .social-btn span {
+    font-size: 0.75rem;
+  }
 }

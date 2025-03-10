@@ -1,0 +1,365 @@
+/* SkillsExplorer.css */
+
+.skills-explorer {
+  font-family: Arial, sans-serif;
+  background-color: #c3e9e2;
+  min-height: 100vh;
+  position: relative;
+  /* Enable smooth scrolling for the entire component */
+  scroll-behavior: smooth;
+}
+
+/* Fixed sidebar styling for desktop and mobile */
+.sidebar-filters {
+  border-right: 1px solid #dee2e6;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  height: auto;
+  position: sticky;
+  top: 20px;
+  /* Set max-height and add overflow for scrolling within the sidebar */
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.filter-section {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 20px;
+}
+
+.filter-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.filter-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+.form-check-label {
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.form-check-input {
+  cursor: pointer;
+}
+
+.skill-card {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.skill-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.search-container {
+  margin-bottom: 30px;
+}
+
+.filters-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+#searchInput {
+  border-radius: 25px;
+  padding-left: 15px;
+  background-color: #f1f1f1;
+  border: none;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.badge {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.skill-level, .price-tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.beginner {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.intermediate {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.advanced {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.free {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.paid {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+.skill-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  border: none;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+/* Utility class to fix overflow issues */
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+/* Main content smooth scrolling */
+.main-content {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  max-height: calc(100vh - 40px);
+  padding-right: 15px;
+  transition: all 0.3s ease;
+  /* Add a subtle scroll track */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+/* Custom scrollbar styling for WebKit browsers */
+.main-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Add smooth animation for card appearance */
+.skill-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpIn 0.5s forwards;
+}
+
+@keyframes fadeUpIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger card animations */
+.skill-card:nth-child(1) { animation-delay: 0.1s; }
+.skill-card:nth-child(2) { animation-delay: 0.2s; }
+.skill-card:nth-child(3) { animation-delay: 0.3s; }
+.skill-card:nth-child(4) { animation-delay: 0.4s; }
+.skill-card:nth-child(5) { animation-delay: 0.5s; }
+.skill-card:nth-child(6) { animation-delay: 0.6s; }
+.skill-card:nth-child(7) { animation-delay: 0.7s; }
+
+/* Mobile and Tablet Responsiveness */
+@media (max-width: 991.98px) {
+  .sidebar-filters {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 80%;
+    max-width: 350px;
+    height: 100vh;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    border-radius: 0;
+    max-height: 100vh;
+    transition: left 0.3s ease;
+    padding-top: 60px;
+  }
+
+  .sidebar-filters.show {
+    left: 0;
+  }
+
+  .sidebar-toggle {
+    display: flex;
+  }
+
+  .main-content {
+    padding-top: 40px;
+    max-height: none; /* Remove fixed height on mobile */
+    height: auto;
+    overflow-y: visible; /* Let the parent container handle scrolling */
+  }
+
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  /* Body scrolling adjustment for mobile */
+  html, body {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 575.98px) {
+  .main-heading {
+    font-size: 1.75rem;
+  }
+
+  .skill-title {
+    font-size: 1.25rem;
+  }
+
+  .sidebar-filters {
+    width: 90%;
+  }
+
+  .sidebar-toggle {
+    top: 5px;
+    left: 5px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .search-box {
+    width: 100% !important;
+  }
+
+  #searchInput {
+    font-size: 1rem;
+    height: calc(1.5em + 0.75rem + 2px);
+  }
+
+  /* Improve touch targets for mobile */
+  .form-check {
+    margin-bottom: 15px;
+  }
+
+  .form-check-label {
+    font-size: 1rem;
+    padding: 5px 0;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+  }
+}
+
+/* Utility Classes */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Fix for sticky sidebar in Safari */
+@supports (-webkit-touch-callout: none) {
+  .sidebar-filters {
+    position: -webkit-sticky;
+  }
+}
+/* Ensure both sidebar and main content have independent scrolling */
+.skills-explorer {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+/* Main content scrolls separately */
+.main-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  height: 100vh;
+  scroll-behavior: smooth;
+  padding: 20px;
+}
+
+/* Hide scrollbar for sidebar on WebKit browsers */
+.sidebar-filters::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-filters::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}

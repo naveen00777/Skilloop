@@ -1,0 +1,76 @@
+body {
+  background-color: #c1e8df;
+  font-family: Arial, sans-serif;
+}
+
+.workshop-header {
+  padding: 2rem 0;
+}
+
+.workshop-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #212529;
+}
+
+.workshop-description {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.event-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.event-date {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.event-time {
+  font-size: 1.1rem;
+}
+
+.event-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.apply-btn {
+  background-color: #6c757d;
+  color: white;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.apply-btn:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
+
+.upcoming-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.logo-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learn-image {
+  max-width: 100%;
+  border-radius: 8px;
+}
